@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>VR Scene</title>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-fonts"></script>
   </head>
   <body>
@@ -17,13 +18,10 @@
       <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#ff00ff"></a-plane>
 
       <!-- Текст з кирилицею -->
-      <a-text 
-        value="Вітаємо у світі браузерного VR" 
-        position="-2 2 -3" 
-        color="#000" 
-        width="6" 
-        font="roboto">
-      </a-text>
+      <a-entity troika-text="value: Вітаємо у VR-сцені!; font: https://cdn.jsdelivr.net/npm/@fontsource/open-sans/files/open-sans-latin-400-normal.woff; 
+      color: black; fontSize: 0.3" 
+      position="-2 2 -3" 
+      rotation="0 0 0"></a-entity>
 
       <!-- Переплетені тора -->
       <a-torus position="0 1.5 -3" radius="0.5" radius-tubular="0.1" color="#ffcc00" rotation="90 0 0"></a-torus>
@@ -38,5 +36,8 @@
       <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
       
     </a-scene>
+
+    <script src="https://cdn.jsdelivr.net/npm/troika-three-text/dist/troika-three-text.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
   </body>
 </html>
