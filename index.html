@@ -3,35 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>VR Scene</title>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/troika-three-text/dist/troika-three-text.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe@1.6.0/dist/aframe-master.min.js"></script>
   </head>
   <body>
     <a-scene background="color: #e0e0e0">
       
-      <!-- Освітлення -->
       <a-entity light="type: ambient; color: #bbb"></a-entity>
       <a-entity light="type: directional; intensity: 0.8" position="1 3 2"></a-entity>
 
-      <!-- Плоска підлога -->
       <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#ff00ff"></a-plane>
 
-      <!-- Текст з кирилицею -->
-      <a-entity troika-text="value: Віртуальна реальність; fontSize: 0.5; color: black; 
-      font: https://cdn.jsdelivr.net/npm/@fontsource/open-sans/files/open-sans-cyrillic-400-normal.woff2" 
-      position="-2 2 -4"></a-entity>
+      <a-text value="Welcome to browser’s VR!" color="black" width="10" position="-0.5 1 -6"></a-text>
 
-      <!-- Переплетені тора -->
       <a-torus position="0 1.5 -3" radius="0.5" radius-tubular="0.1" color="#ffcc00" rotation="90 0 0"></a-torus>
       <a-torus position="0.2 1.5 -3" radius="0.5" radius-tubular="0.1" color="#00aa00" rotation="0 90 0"></a-torus>
       <a-torus position="-0.2 1.5 -3" radius="0.5" radius-tubular="0.1" color="#ffaa00" rotation="0 0 90"></a-torus>
 
-      <!-- Циліндри-опори -->
       <a-cylinder position="-0.3 0.5 -3" radius="0.02" height="1" color="#0000ff"></a-cylinder>
       <a-cylinder position="0.3 0.5 -3" radius="0.02" height="1" color="#ffff00"></a-cylinder>
 
-      <!-- Камера -->
       <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
       
     </a-scene>
